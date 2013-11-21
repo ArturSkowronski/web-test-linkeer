@@ -1,0 +1,23 @@
+form.form-horizontal.well
+    fieldset
+        legend getLink
+        div.form-group
+            label.col-lg-3.control-label(for="sederId") Sender Id
+            div.col-lg-9
+                input.form-control#sederId(
+                    ng-model="sender_id",
+                    placeholder="Sender Id")
+        div.form-group
+            label.col-lg-3.control-label(for="receiverId") receiver Id
+            div.col-lg-9
+                input.form-control#receiverId(
+                    ng-model="receiver_id",
+                    placeholder="Receiver Id")
+        div.form-group
+            label.col-lg-3.control-label(for="fakeId") fake Id
+            div.col-lg-9
+                input.form-control#fakeId(
+                    ng-model="fake_id",
+                    placeholder="Fake ID")                
+        button.col-lg-12.btn.btn-primary(ng-click="getLink()") Test getLink API    
+         

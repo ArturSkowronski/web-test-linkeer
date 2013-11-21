@@ -1,0 +1,16 @@
+div.panel.panel-primary
+    div.panel-heading
+        div.panel-title Result link.share API
+    div.panel-body 
+        table.table.table-striped.table-bordered.table-hover.col-lg-12
+            thead
+                th.col-lg-2 #
+                th.col-lg-7 Request
+                th.col-lg-4 Response
+            tbody(ng-repeat="table in tables")
+                tr.success(ng-class="{'warning': table.messages.length>0 && table.result,'danger': !table.result}")
+                    td {{$index + 1}}
+                    td {{table.request}}
+                    td Result: {{table.result}} 
+                        div(ng-repeat="message in table.messages")
+                            {{message}}

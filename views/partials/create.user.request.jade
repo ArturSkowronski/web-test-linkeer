@@ -1,0 +1,11 @@
+form.form-horizontal.well
+    fieldset
+        legend createUser
+        div.form-group
+            label.col-lg-3.control-label(for="fakeId") Faked ID
+            div.col-lg-9
+                input.form-control#fakeId(
+                    ng-model="fake_id",
+                    placeholder="Faked ID")
+        button.col-lg-12.btn.btn-primary(ng-click="createUser()") Test API    
+         

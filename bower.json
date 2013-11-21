@@ -1,0 +1,10 @@
+{
+  "name": "Linkeer",
+  "version": "1.0.0",
+  "main": "linkeer.js",
+  "dependencies": {
+    "jquery": "latest"
+  },
+  "devDependencies": {
+  }
+}

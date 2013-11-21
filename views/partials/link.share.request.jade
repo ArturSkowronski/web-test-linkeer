@@ -1,0 +1,29 @@
+form.form-horizontal.well
+    fieldset
+        legend linkShare
+        div.form-group
+            label.col-lg-3.control-label(for="inputLinkUrl") Link Url
+            div.col-lg-9
+                input.form-control#inputLinkUrl(
+                    ng-model="link_url",
+                    placeholder="Link Url")
+        div.form-group
+            label.col-lg-3.control-label(for="sederId") Sender Id
+            div.col-lg-9
+                input.form-control#sederId(
+                    ng-model="sender_id",
+                    placeholder="Sender Id")
+        div.form-group
+            label.col-lg-3.control-label(for="receiverId") receiver Id
+            div.col-lg-9
+                input.form-control#receiverId(
+                    ng-model="receiver_id",
+                    placeholder="receiverId")
+        div.form-group
+            label.col-lg-3.control-label(for="description") desc
+            div.col-lg-9
+                input.form-control#description(
+                    ng-model="description",
+                    placeholder="description")
+        button.col-lg-12.btn.btn-primary(ng-click="linkShare()") Test link.share API    
+         

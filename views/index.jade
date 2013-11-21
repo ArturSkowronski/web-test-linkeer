@@ -1,0 +1,56 @@
+!!!
+!!! 5
+html(ng-app="linkeerApiTestApp")
+    head
+        meta(charset='utf8')
+        base(href='/')
+        title Test Linkeer API
+        link(rel='stylesheet', href='/css/app.css')
+        link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootswatch/3.0.0/cyborg/bootstrap.min.css')
+        link(rel='stylesheet', href='/css/test.css')
+        link(rel='stylesheet', href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css")
+        body(ng-controller="EndpointController")
+        div.navbar.navbar-default
+            div.container
+                div.navbar-header
+                    a.navbar-brand Test Linkeer API
+                    i.icon-external-link.pull-left.icon-large
+                button#signIn(class="btn btn-{{buttonStyle}}",ng-click="signin()") {{buttonText}}
+        div.container.col-lg-12(class="alert alert-{{alertStyle}}") {{alertText}}
+        div.container.col-lg-12(ng-controller="PostLinkController")
+            div.col-lg-6
+                include partials/link.share.request.jade
+            div.col-lg-6
+                include partials/link.share.response.jade
+        div.container.col-lg-12(ng-controller="GetLinkController")
+            div.col-lg-6
+                include partials/get.link.request.jade
+            div.col-lg-6
+                include partials/get.link.response.jade
+        div.container.col-lg-12(ng-controller="CreateUserController")
+            div.col-lg-6
+                include partials/create.user.request.jade
+            div.col-lg-6
+                include partials/create.user.response.jade
+        div.container.col-lg-12(ng-controller="AuthorizeUserController")
+            div.col-lg-6
+                include partials/authorize.user.request.jade
+            div.col-lg-6
+                include partials/authorize.user.response.jade
+        div.container.col-lg-12(ng-controller="SelectUserController")
+            div.col-lg-6
+                include partials/select.user.request.jade
+            div.col-lg-6
+                include partials/select.user.response.jade
+        div.container.col-lg-12(ng-controller="SendInvitation")
+            div.col-lg-6
+                include partials/send.invitation.request.jade
+            div.col-lg-6
+                include partials/send.invitation.response.jade
+        div.footer
+            div.navbar-fixed-bottom.container
+                p Artur Skowroński @ 2013
+        script(src='js/components/angular/angular.js')
+        script(src='js/components/jquery/jquery.min.js')
+        script(src='js/app.js')
+        script(src='https://apis.google.com/js/client.js?onload=init')    
